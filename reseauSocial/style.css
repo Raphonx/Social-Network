@@ -1,0 +1,255 @@
+*, *::before, *::before{
+    box-sizing: border-box;
+}
+body{
+    list-style: none;
+    background: #f1f1f1;
+    font-family: Roboto sans-serif ;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.67);
+    margin: 0;
+    line-height: 1.3rem;
+}
+a {text-decoration: none; color: inherit;}
+
+/* -------- HEADER ------------*/
+
+.topbar{
+    background: #2C3E50;
+    text-align: center;
+    color: white;
+}
+.topbar_logo{
+    display: block;
+    font-size: 24px;
+    padding: 12px 0;
+}
+.topbar_nav{
+    padding-bottom: 16px;
+}
+.topbar_nav a{
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.67);
+    margin: 0 8px;
+}
+.topbar_nav a:hover{
+    color: white;
+    transition: color .3s;
+}
+@media only screen and (min-width: 700px){
+    .topbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 64px;
+        padding: 0 51px;
+    }
+    .topbar_logo, .topbar_nav{
+        padding: 0;
+    }
+    .topbar_nav a{
+        margin: 0 20px;
+    }
+}
+
+/* -------- MAIN ------------*/
+
+.container{
+    padding: 0 15px;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.left_bar{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    padding-bottom: 0.6rem;
+}
+.left_bar a{
+    display: block;
+    width: 50%;
+    padding: 0 0;
+}
+.left_bar a::before{
+    content: "";
+    display: inline-block;
+    width: 11px;
+    height: 9px;
+    vertical-align: center;
+    margin-right: 20px;
+    background: url(img/actualite.svg) center center / contain no-repeat ;
+}
+.left_bar .img_messages::before{
+    background-image: url(img/messages.svg);
+}
+.left_bar .img_evenements::before{
+    background-image: url(img/evenements.svg);
+
+}
+.left_bar .img_groupes::before{
+    background-image: url(img/groupes.svg);
+
+}
+.left_bar a:hover {
+    color: #000;
+}
+@media only screen and (min-width: 900px){
+    .container{
+        display: flex;
+    }
+    .left_bar{
+        display: block;
+        flex: none;
+        width: 180px;
+    }
+    .left_bar a{
+        width: 100%;
+    }
+    .main{
+        width: 100%;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .right_bar{
+        flex: none;
+        width: 310px;
+    }
+}
+.main{
+    background-color: #fff;
+}
+.card{
+    margin-bottom: 17px;
+    border: solid 1px #DBDBDB;
+    border-radius: 5px;
+}
+.card_header{
+    display: flex;
+    align-items: center;
+    height: 73px;
+}
+.last_card_header{
+    display: flex;
+    align-items: center;
+    height: 73px;
+}
+.header_img{
+    margin: 11px;
+    border-radius: 50px;
+}
+.header_title{
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+}
+.header_time{
+    color: rgba(0, 0, 0, 0.38);
+    font-size: 12px;
+}
+.card_img{
+    height: 281px;
+    background: url(img/wallhaven-141600.jpg) center center / cover no-repeat;
+}
+.last_card_img{
+    height: 281px;
+    background: url(img/wallhaven-141600.jpg) center center / cover no-repeat;
+}
+.card_text{
+    padding: 0 11px;
+    color: rgba(0, 0, 0, 0.6);
+}
+.footer_card{
+    display: flex;
+    justify-content: space-around;
+    background: #FBFBFB;
+    border: 1px solid #DBDBDB;
+    border-radius: 0px 0px 5px 5px;
+    height: 37px;
+    align-items: center;
+}
+.footer_like{
+    width: 50%;
+    padding-left: 12px;
+    color: #BDBDBD;
+}
+.footer_comment{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    padding-right: 12px;
+    color: #BDBDBD;
+}
+.footer_like::before{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+    vertical-align: center;
+    margin-right: 6px;
+    background: url(img/like.svg) center center / contain no-repeat ;
+}
+.footer_comment::before{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+    vertical-align: center;
+    margin-right: 6px;
+    background: url(img/com.svg) center center / contain no-repeat ;
+}
+.card_right_bar{
+    border: solid 1px #DBDBDB;
+    border-radius: 5px;
+    background: #fff;
+}
+@media only screen and (max-width: 900px){
+    .card_right_bar{
+        display: none
+    }
+    .last_card_header{
+        display: none;
+    }
+    .last_card_img{
+        display: none;
+    }
+}
+.sidebar_title{
+    padding-top: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.87);
+}
+.sidebar_separation{
+    border: 1px solid #000000;
+    margin-bottom: 11px;
+    margin-top: 4px;
+}
+.friend{
+    display: flex;
+    padding: 7px 0;
+}
+.friend_informations{
+    padding-left: 7px;
+}
+.friend_name{
+    font-weight: bold;
+    font-size: 15px;
+    color: #000;
+}
+.mutual_friends{
+    margin-bottom: 11px;
+}
+.add_friends{
+    font-size: 12px;
+    color: #000;
+}
+.add_friends::before{
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 12px;
+    vertical-align: center;
+    margin-right: 8px;
+    background: url(img/ajout_amis.svg) center center / contain no-repeat ;
+}
